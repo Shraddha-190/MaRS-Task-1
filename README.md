@@ -12,7 +12,7 @@ The circuit simulation demonstrates independent blinking of three LEDs in differ
 
 Circuit explanation:
 
-The circuit uses Arduino Uno R3 board to control all the electronic components using programming logic. Then the LEDs are connected to three different digital pins and are connected to resistors to limit current flow to protect LEDs from burning.And then the circuit is completed by connecting the other side to ground.
+The circuit uses Arduino Uno R3 board to control all the electronic components using programming logic. Then the LEDs are connected to three different digital pins and are connected to 220 ohm resistors to limit current flow to protect LEDs from burning.And then the circuit is completed by connecting the other side to ground.
 
 ## Question-2
 [Tinkercad simulation-Q2](https://www.tinkercad.com/things/6M2NQFIm6n8-mars-question-2ec25i2022/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=HEarIVdlxkexyREgVeB30WIAsI7TyXM5oun7SJAxRME)
@@ -24,3 +24,14 @@ The circuit demonstrates the use of potentiometer to control the blinking speed 
 Circuit explanation:
 
 The circuit uses an Arduino Uno R3 board to control all the electronic components using programmed logic. A normal LED is connected such that its anode is connected to a digital pin and its cathode is connected to ground through a resistor to limit flow of current, ensuring safe operation.An RGB LED is also used, where its red, green, and blue pins are connected to PWM-enabled pins, here 9, 10, and 11 of the Arduino. Each of these connections includes a resistor to limit current. The common cathode of the RGB LED is connected to ground to complete the circuit.A potentiometer is connected with its two outer terminals to 5V and GND, and the middle terminal-wiper is connected to analog pin A0. This allows the Arduino to read varying voltage values from 0 to 5V which are then used to control both the color of the RGB LED and the blinking speed of the normal LED.
+
+## Question-3
+[Tinkercad simulation-Q3](https://www.tinkercad.com/things/7dwlGhEGco8-mars-question-3ec25i2022/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=g54fT8JDTm5X58G36VR0HYy0_VWqxrYtRkzG6mIuqQE)
+
+Code explanation:
+
+The circuit implements a reaction time tester using an LED and a pushbutton. The LED turns ON after a random delay, and the user is required to press the pushbutton as quickly as possible. The reaction time is then calculated and displayed as output.The pushbutton is configured using INPUT_PULLUP, which means it remains in a HIGH state by default and changes to LOW when pressed. The LED state is initially set to false and becomes true when the LED turns ON.A random delay is generated using random() along with randomSeed() to ensure that the delay is different each time the program runs.When the LED turns ON, the current time is recorded using millis(). When the button is pressed, the reaction time is calculated as the difference between the current time and the recorded start time.
+
+Circuit explanation:
+
+The circuit consists of an Arduino Uno to control all the elctronic components, an LED, and a pushbutton. The LED is connected to a digital pin through a 220 ohm resistor to limit current flow, with its cathode connected to ground. The pushbutton is connected to a digital pin using the INPUT_PULLUP configuration, where it remains HIGH by default and goes LOW when pressed. This setup allows the Arduino to detect button presses and control the LED for measuring reaction time.
