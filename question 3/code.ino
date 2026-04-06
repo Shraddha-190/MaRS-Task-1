@@ -16,15 +16,17 @@ void setup() {
 }
 
 void loop() {
+
   int waitTime = random(2000, 5000);
   delay(waitTime);
+
 
   digitalWrite(ledPin, HIGH);
   ledOnTime = millis();
   ledState = true;
 
   while (ledState) {
-    if (digitalRead(buttonPin) == LOW) { // button pressed
+    if (digitalRead(buttonPin) == LOW) { 
       reactionTime = millis() - ledOnTime;
 
       Serial.print("Your Reaction Time: ");
@@ -34,7 +36,7 @@ void loop() {
       digitalWrite(ledPin, LOW);
       ledState = false;
 
-      delay(2000); // small pause before next round
+      delay(2000); 
     }
   }
 }
