@@ -35,3 +35,17 @@ The circuit implements a reaction time tester using an LED and a pushbutton. The
 Circuit explanation:
 
 The circuit consists of an Arduino Uno to control all the elctronic components, an LED, and a pushbutton. The LED is connected to a digital pin through a 220 ohm resistor to limit current flow, with its cathode connected to ground. The pushbutton is connected to a digital pin using the INPUT_PULLUP configuration, where it remains HIGH by default and goes LOW when pressed. This setup allows the Arduino to detect button presses and control the LED for measuring reaction time.
+
+## Mini Project- Gas leak detection system
+[Tinkercad simulation](https://www.tinkercad.com/things/l8rssTgrY1t-gas-leak-detector-system-ec25i2022/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=cT1ZjITnBRn0W4BHDkCC5Egac6FW45axsprAVoytotU)
+
+Working Principle:
+
+This project is a gas leak detection system that uses a gas sensor to monitor the level of gas in the surroundings. The sensor continuously sends analog signals to the Arduino based on gas concentration. The Arduino compares this value with a preset threshold, and if the gas level exceeds the limit, it activates an LED and a buzzer to alert the user. If the gas level is normal, the system remains inactive.
+
+Code explanation:
+
+Initially, a threshold value for the gas level is defined. Communication between the Arduino and the computer is established using Serial.begin(). The gas sensor value is then continuously read using analogRead(). If the measured value exceeds the threshold, both the LED and buzzer are set to HIGH, providing visual and audio alerts. Otherwise, they remain LOW. The sensor readings are also displayed on the Serial Monitor for real-time monitoring.
+Circuit explanation:
+
+The circuit consists of an Arduino Uno connected to a gas sensor (simulated using a potentiometer), an LED with a current-limiting resistor, and a buzzer. The gas sensor’s output is connected to the analog pin A0, while its power pins are connected to 5V and GND. The LED is connected to digital pin 7 through a resistor, and the buzzer is connected to digital pin 8. All components share common power rails via the breadboard. The setup allows the Arduino to read gas levels and trigger the LED and buzzer when the gas concentration exceeds a safe limit
