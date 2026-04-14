@@ -55,6 +55,6 @@ The circuit consists of an Arduino Uno connected to a gas sensor (simulated usin
 
 Connecting IR sensor one side to VCC and another to ground and the signal to digital pin. Then interfacing LCD with I2C and shorting its power supply. Making all connections through Breadboard.
 
-##Code explanation
+## Code explanation
 
 Importing wire.h module and LiquidCrystal_I2C.h module. Setting initial state of IR as HIGH denoting no object is present then reading the state of IR whenever it detects an object its state becomes LOW. When the previous state is HIGH and current state is LOW then count should increase. Else in initial state should go back to HIGH.
