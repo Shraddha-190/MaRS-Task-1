@@ -49,3 +49,12 @@ Initially, a threshold value for the gas level is defined. Communication between
 Circuit explanation:
 
 The circuit consists of an Arduino Uno connected to a gas sensor (simulated using a potentiometer), an LED with a current-limiting resistor, and a buzzer. The gas sensor’s output is connected to the analog pin A0, while its power pins are connected to 5V and GND. The LED is connected to digital pin 7 through a resistor, and the buzzer is connected to digital pin 8. All components share common power rails via the breadboard. The setup allows the Arduino to read gas levels and trigger the LED and buzzer when the gas concentration exceeds a safe limit
+
+#Task 2-Counting the moving objects through an IR sensor and displaying on a lcd screen
+##Circuit explanation
+
+Connecting IR sensor one side to VCC and another to ground and the signal to digital pin. Then interfacing LCD with I2C and shorting its power supply. Making all connections through Breadboard.
+
+##Code explanation
+
+Importing wire.h module and LiquidCrystal_I2C.h module. Setting initial state of IR as HIGH denoting no object is present then reading the state of IR whenever it detects an object its state becomes LOW. When the previous state is HIGH and current state is LOW then count should increase. Else in initial state should go back to HIGH.
