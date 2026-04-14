@@ -6,11 +6,11 @@ int initial=HIGH; //no object initially
 void setup() 
 {
   pinMode(ir,INPUT);
+  lcd.init();
   lcd.begin(0,0);
   lcd.backlight();
   Serial.begin(9600);
 }
-
 int count=0;
 bool state;
 void loop() 
@@ -27,7 +27,9 @@ if(state==LOW) //object detected
 }
 else
   initial=HIGH;
+lcd.print("Count=");
 lcd.print(count);
+lcd.setCursor(0, 0);
 Serial.println(count);
   
 }
